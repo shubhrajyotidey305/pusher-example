@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:pusher_channels_flutter/pusher_channels_flutter.dart';
 
 class Home extends StatefulWidget {
@@ -20,8 +19,8 @@ class _HomeState extends State<Home> {
   Future<void> _initPusher() async {
     try {
       await pusher.init(
-          apiKey: "f58727cd2576ee281b14",
-          cluster: "mt1",
+          apiKey: "API_KEY",
+          cluster: "CLUSTER",
           onConnectionStateChange: onConnectionStateChange);
       await pusher.subscribe(
           channelName: 'my_channel',
