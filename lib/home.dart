@@ -20,8 +20,8 @@ class _HomeState extends State<Home> {
   Future<void> _initPusher() async {
     try {
       await pusher.init(
-          apiKey: "503c295a8c71896beade",
-          cluster: "mt1",
+          apiKey: "APIKEY",
+          cluster: "CLUSTER",
           onConnectionStateChange: onConnectionStateChange);
 
       await pusher.subscribe(
